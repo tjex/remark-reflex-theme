@@ -230,22 +230,43 @@ blockquote {
 }
 
 /* Two-column layout */
+.slide-title {
+    width: 95%;
+    height: 10%;
+}
 .left-column {
   color: #777;
-  width: 20%;
-  height: 92%;
+  width: 25%;
+  height: 90%;
   float: left;
 }
-.left-column h2:last-of-type {
-  color: var(--h2-color);
+
+.left-column h3 {
+  color: var(--secondary);
+  background: var(--background);
+  border-radius: 15px; /* Adjust the value as needed */
+  display: inline-block; /* Ensures the background only wraps around the text */
+  padding: 5px 10px; /* Adjust the padding as needed */
+  /* Other styles for the intermediate h2 elements */
 }
-.left-column h3:last-child {
-  color: var(--primary);
+
+.left-column h3:last-of-type {
+  color: var(--h3-color);
+  background: var(--code-background);
+  border-radius: 15px; /* Adjust the value as needed */
+  display: inline-block; /* Ensures the background only wraps around the text */
+  padding: 5px 10px; /* Adjust the padding as needed */
 }
+
+
+/* .left-column h3:last-child { */
+/*   color: var(--primary); */
+/* } */
+
 .right-column {
-  width: 75%;
+  width: 72%;
   float: right;
-  padding-top: 1em;
+  padding-top: var(--spacing);
 }
 
 /* presenter notes */
