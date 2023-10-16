@@ -1,7 +1,7 @@
 :root {
-  --font-family: system-ui, -apple-system, "Segoe UI", "Helvetica", "Roboto", "Ubuntu",
-    "Cantarell", "Oxygen-Sans", "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
-    "Segoe UI Symbol", "Noto Color Emoji";
+  --font-family: system-ui, -apple-system, "Segoe UI", "Helvetica", "Roboto",
+    "Ubuntu", "Cantarell", "Oxygen-Sans", "Noto Sans", sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   --line-height: 1.6;
   --font-size: 1rem;
   --font-small: 0.85rem;
@@ -18,19 +18,21 @@
   --background-color-darker: hsl(205, 17%, 10%);
   --color: hsl(205, 16%, 80%);
   --red: hsl(0, 50%, 60%);
-  --h1-color: hsl(205, 20%, 74%);
-  --h2-color: #b3c2cc;
-  --h3-color: hsl(205, 18%, 76%);
+  --soft-red: hsl(0, 19%, 47%);
+  --burnt-yellow: #a6794d;
+  --h1-color: hsl(205, 40%, 65%);
+  --h2-color: hsl(205, 40%, 65%);
+  --h3-color: hsl(205, 38%, 65%);
   --h4-color: #aab9c3;
-  --h5-color: hsl(205, 16%, 67%);
+  --h5-color: hsl(205, 16%, 65%);
   --h6-color: #a0aeb9;
   --muted-color: hsl(205, 10%, 50%);
-  --muted-border-color: #108DBC;
+  --muted-border-color: #108dbc;
   --primary: hsl(195, 85%, 41%);
   --primary-hover: hsl(195, 80%, 50%);
   --primary-focus: rgba(16, 149, 193, 0.25);
   --primary-inverse: #fff3f1;
-  --secondary: hsl(205, 15%, 41%);
+  --secondary: hsl(205, 15%, 51%);
   --secondary-hover: hsl(205, 10%, 50%);
   --secondary-focus: rgba(115, 130, 140, 0.25);
   --secondary-inverse: #fff3f1;
@@ -59,7 +61,7 @@
   --range-thumb-active-color: var(--primary);
   --table-border-color: var(--muted-border-color);
   --table-row-stripped-background-color: rgba(115, 130, 140, 0.05);
-  --code-background-color: #1d2931;
+  --code-background: #222a30;
   --code-color: var(--muted-color);
   --code-size: calc(var(--font-size) * 0.8);
   --code-weight: 400;
@@ -73,11 +75,11 @@
 
 body {
   font-family: var(--font-family);
-  color: var(--color)
+  color: var(--color);
 }
 
 .remark-slide-content {
-    background-color: var(--background-color);
+  background-color: var(--background-color);
 }
 h1,
 h2,
@@ -104,16 +106,17 @@ h3 {
   bottom: 3em;
 }
 
+ol li,
 ul li {
-  list-style-type: "―";
   padding-left: 0.6rem;
+  margin-left: 1rem;
   line-height: 1.25em;
 }
 
-ol li {
-  margin-left: 1.35rem;
-  padding-left: 0.4rem;
+ul li {
+  list-style-type: "―";
 }
+
 .red {
   color: var(--red);
 }
@@ -126,18 +129,40 @@ a > code {
   text-decoration: none;
 }
 code {
-  background: var(--code-background);
   border-radius: 5px;
 }
 .remark-code,
 .remark-inline-code {
   font-family: "Hack Nerd Font Mono";
   font-size: var(--code-size);
-  background-color: var(--mark-color)
+  background-color: var(--code-background);
 }
 .remark-code-line-highlighted {
-  background-color: var(--mark-color);
+  background-color: var(--code-background);
 }
+
+.hljs-ir-black .hljs {
+  display: block;
+  overflow-x: auto;
+  padding: 0.5em;
+  background: var(--code-background);
+  color: var(--color);
+}
+
+blockquote {
+  display: block;
+  color: var(--secondary);
+  margin: var(--typography-spacing-vertical) 0;
+  padding-left: var(--spacing);
+  padding-bottom: 0.5rem;
+  padding-top: 0.5rem;
+  border-right: none;
+  border-left: 0.25rem solid var(--blockquote-border-color);
+  border-inline-start: 0.25rem solid var(--blockquote-border-color);
+  border-inline-end: none;
+}
+
+/* layout classes */
 
 .pull-left {
   float: left;
@@ -211,7 +236,9 @@ code {
   height: 92%;
   float: left;
 }
-.left-column h2:last-of-type,
+.left-column h2:last-of-type {
+  color: var(--h2-color);
+}
 .left-column h3:last-child {
   color: var(--primary);
 }
@@ -223,6 +250,6 @@ code {
 
 /* presenter notes */
 .remark-notes-area {
-    background: var(--background-color);
-    color: var(--color);
+  background: var(--background-color);
+  color: var(--color);
 }
