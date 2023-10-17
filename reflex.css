@@ -94,11 +94,11 @@ h3 {
   color: var(--h1-color);
 }
 .remark-slide-content h2 {
-  font-size: 2em;
+  font-size: 1.8em;
   color: var(--h2-color);
 }
 .remark-slide-content h3 {
-  font-size: 1.6em;
+  font-size: 1.4em;
   color: var(--h3-color);
 }
 .footnote {
@@ -244,24 +244,18 @@ blockquote {
 .left-column h3 {
   color: var(--secondary);
   background: var(--background);
-  border-radius: 15px; /* Adjust the value as needed */
+  border-radius: 15px;
   display: inline-block; /* Ensures the background only wraps around the text */
-  padding: 5px 10px; /* Adjust the padding as needed */
-  /* Other styles for the intermediate h2 elements */
+  padding: 5px 10px;
 }
 
 .left-column h3:last-of-type {
   color: var(--h3-color);
   background: var(--code-background);
-  border-radius: 15px; /* Adjust the value as needed */
+  border-radius: 10px;
   display: inline-block; /* Ensures the background only wraps around the text */
-  padding: 5px 10px; /* Adjust the padding as needed */
+  padding: 5px 10px;
 }
-
-
-/* .left-column h3:last-child { */
-/*   color: var(--primary); */
-/* } */
 
 .right-column {
   width: 72%;
