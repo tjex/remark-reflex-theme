@@ -1,9 +1,12 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
     <meta charset="utf-8" />
     <title>Remark</title>
     <link rel="stylesheet" type="text/css" href="./reflex.css" />
+    <script>
+      src = "js/media-handler.js";
+    </script>
   </head>
   <body>
     <textarea id="source">
@@ -58,7 +61,7 @@ template: inverse
 
 I was sitting here trying to think of how to fill this text.
 
-After some thining I realised, I should just type while I think. 
+After some thining I realised, I should just type while I think.
 
 This has a few benefits:
 
@@ -97,22 +100,21 @@ Slideshow created using [remark](http://github.com/gnab/remark).
     <script src="./js/remark-0.15.0.min.js"></script>
     <script>
       var slideshow = remark.create({
-          highlightStyle: 'ir-black',
-          highlightLanguage: 'remark',
-          highlightLines: true
-        }) ;
+        highlightStyle: "zenburn",
+        highlightLines: true,
+      });
     </script>
     <script>
       var _gaq = _gaq || [];
-      _gaq.push(['_setAccount', 'UA-44561333-1']);
-      _gaq.push(['_trackPageview']);
+      _gaq.push(["_setAccount", "UA-44561333-1"]);
+      _gaq.push(["_trackPageview"]);
 
-      (function() {
-        var ga = document.createElement('script');
-        ga.src = 'https://ssl.google-analytics.com/ga.js';
+      (function () {
+        var ga = document.createElement("script");
+        ga.src = "https://ssl.google-analytics.com/ga.js";
         var s = document.scripts[0];
         s.parentNode.insertBefore(ga, s);
-      }());
+      })();
     </script>
   </body>
 </html>
